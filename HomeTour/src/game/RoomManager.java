@@ -3,17 +3,23 @@ package game;
 import fixtures.Room;
 
 public class RoomManager {
-
+	//static Map<String, String, String> myMap = new HashMap<String, String, String>();
 	Room startingRoom;
 	Room[] rooms;
 	
 	public void init() {
-		this.rooms = new Room[4];
+		this.rooms = new Room[5];
+		Room frontHallWay = new Room(
+				"FrontHallway",
+				"The entrance of the apartment",
+				"The hallway has a door to the front of the apartment." +
+				"\n". +"There are stairs leading up to the door.");
+		this.rooms[4] = frontHallWay;
 		
 		Room kitchen = new Room(
 				"The Kitchen",
 				"An open room kitchen and dining area",
-				"The cooking area of a basement apartment that has the entryway to the apartment. There is a small circular dining table and a fridge next to it." + "\n"
+				"The cooking area of a apartment that has the entryway to the apartment. There is a small circular dining table and a fridge next to it." + "\n"
 				+ "To the north is the open area livingroom where a flatscreen TV and an L-shaped couch can be seen."
 				+ "\n" + "To the west is a small bathroom with a tub and sink.");
 		this.rooms[0] = kitchen;
@@ -35,10 +41,10 @@ public class RoomManager {
 				"To the south, the kitchen can be seen with a dining table.");
 		this.rooms[3] = bathRoom;
 		
-		kitchen.setExits(rooms[0], rooms[1], null, rooms[3]);
-		livingRoom.setExits(null, rooms[0], rooms[2], null);
-		bedRoom.setExits(null, null, rooms[1], null);
-		bathRoom.setExits(null, null, null, rooms[0]);
+		kitchen.setExits(null, rooms[1], null, rooms[3], rooms[4]); //null was rooms[0];
+		livingRoom.setExits(null, rooms[0], rooms[2], null, null);
+		bedRoom.setExits(null, rooms[3], rooms[1], null);
+		bathRoom.setExits(null, rooms[2], null, rooms[0]);
 		
 		
 		rooms[0] = kitchen;
