@@ -41,16 +41,17 @@ public class RoomManager {
 				"To the south, the kitchen can be seen with a dining table.");
 		this.rooms[3] = bathRoom;
 		
-		kitchen.setExits(null, rooms[1], null, rooms[3], rooms[4]); //null was rooms[0];
+		kitchen.setExits(rooms[4], rooms[1], null, rooms[3], rooms[0]); //null was rooms[0];
 		livingRoom.setExits(null, rooms[0], rooms[2], null, null);
-		bedRoom.setExits(null, rooms[3], rooms[1], null);
-		bathRoom.setExits(null, rooms[2], null, rooms[0]);
-		
+		bedRoom.setExits(null, rooms[3], rooms[1], null, null);
+		bathRoom.setExits(null, rooms[2], null, rooms[0], null);
+		frontHallWay.setExits(rooms[0], null, null, null, null);
 		
 		rooms[0] = kitchen;
 		rooms[1] = livingRoom;
 		rooms[2] = bedRoom;
 		rooms[3] = bathRoom;
+		rooms[4] = frontHallWay;
 	
 	}
 }
