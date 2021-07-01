@@ -25,17 +25,16 @@ public void setExits(Room v, Room w, Room x, Room y, Room z) {
 	
 	public Room getExit(String direction) {
 		switch (direction) {
-		case "up":
+		case "forward":
 			return exits[0]; //kitchen
-		case "back":
+		case "backwards":
 			return exits[1]; //living room
 		case "right":
 			return exits[2]; //bedroom
 		case "left":
 			return exits[3]; //bath room
-		default:
-			System.out.println("Please enter either go: up, back, right or left");
-			break;
+		case "up":
+			return exits[4]; //front hallway
 		}
 		return null;
 	}
