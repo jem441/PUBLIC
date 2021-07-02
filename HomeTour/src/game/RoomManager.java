@@ -8,13 +8,13 @@ public class RoomManager {
 	Room[] rooms;
 	
 	public void init() {
-		this.rooms = new Room[5];
-		Room frontHallWay = new Room(
-				"FrontHallway",
-				"The entrance of the apartment",
-				"The hallway has a door to the front of the apartment." +
-				"\n". +"There are stairs leading up to the door.");
-		this.rooms[4] = frontHallWay;
+		this.rooms = new Room[4];
+		//Room frontHallWay = new Room(
+		//		"FrontHallway",
+		//		"The entrance of the apartment",
+		//		"The hallway has a door to the front of the apartment." +
+		//		"\n". +"There are stairs leading up to the door.");
+		//this.rooms[4] = frontHallWay;
 		
 		Room kitchen = new Room(
 				"The Kitchen",
@@ -41,11 +41,11 @@ public class RoomManager {
 				"To the south, the kitchen can be seen with a dining table.");
 		this.rooms[3] = bathRoom;
 		
-		kitchen.setExits(rooms[4], rooms[1], null, rooms[3], rooms[0]); //null was rooms[0];
-		livingRoom.setExits(null, rooms[0], rooms[2], null, null);
-		bedRoom.setExits(null, rooms[3], rooms[1], null, null);
-		bathRoom.setExits(null, rooms[2], null, rooms[0], null);
-		frontHallWay.setExits(rooms[0], null, null, null, null);
+		kitchen.setExits(rooms[0], rooms[1], null, rooms[3]); //null was rooms[0];
+		livingRoom.setExits(null, rooms[0], rooms[2], null);
+		bedRoom.setExits(null, rooms[3], rooms[1], null);
+		bathRoom.setExits(null, rooms[2], null, rooms[0]);
+		frontHallWay.setExits(rooms[0], null, null, null);
 		
 		rooms[0] = kitchen;
 		rooms[1] = livingRoom;
