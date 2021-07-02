@@ -11,12 +11,12 @@ public class Room extends Fixture {
 		this.exits = new Room[4];
 	}
 	
-public void setExits(Room v, Room w, Room x, Room y, Room z) {
+public void setExits(Room v, Room w, Room x, Room y) {
 		exits[0] = v;
 		exits[1] = w;
 		exits[2] = x;
 		exits[3] = y;
-		exits[4] = z;
+		//exits[4] = z;
 	}
 	
 	public Room[] getExits() {
@@ -33,8 +33,8 @@ public void setExits(Room v, Room w, Room x, Room y, Room z) {
 			return exits[2]; //bedroom
 		case "left":
 			return exits[3]; //bath room
-		case "up":
-			return exits[4]; //front hallway
+		//case "up":
+			//return exits[4]; //front hallway
 		}
 		return null;
 	}
