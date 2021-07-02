@@ -45,13 +45,13 @@ public class RoomManager {
 		livingRoom.setExits(null, rooms[0], rooms[2], null);
 		bedRoom.setExits(null, rooms[3], rooms[1], null);
 		bathRoom.setExits(null, rooms[2], null, rooms[0]);
-		frontHallWay.setExits(rooms[0], null, null, null);
+		//frontHallWay.setExits(rooms[0], null, null, null);
 		
 		rooms[0] = kitchen;
 		rooms[1] = livingRoom;
 		rooms[2] = bedRoom;
 		rooms[3] = bathRoom;
-		rooms[4] = frontHallWay;
+		//rooms[4] = frontHallWay;
 	
 	}
 }
