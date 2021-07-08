@@ -2,7 +2,7 @@ package com.example.models;
 
 import java.util.Random;
 
-public class User {
+public class User implements Serializable{
 
 	private String firstName;
 	private String lastName;
