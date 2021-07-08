@@ -46,6 +46,8 @@ public class SocialHubDriver {
 						done = true;
 					}
 				}
-		}
+		} else {
+					done = true;
+				}
 	}
 }
